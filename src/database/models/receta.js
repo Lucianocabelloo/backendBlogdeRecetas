@@ -41,7 +41,7 @@ const recetaSchema = new Schema({
         type: String,
         required: true,
         minLength:10,
-        maxLength:500,
+        maxLength:2000,
     },
     autor:{
         type: String,
