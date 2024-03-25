@@ -2,14 +2,14 @@ import mongoose, {Schema} from "mongoose"
 
 
 // Paso 1 : Definir el esquema de la colección en Mongo DB
-const productoSchema = new Schema({
+const recetaSchema = new Schema({
     nombreReceta:{
         type: String,
         required: true,
         minLength:2,
         maxLength:350,
     },
-    formDuracion:{
+    duracion:{
         type: Number, 
         required: true,
         min: 15,
@@ -24,10 +24,6 @@ const productoSchema = new Schema({
             },
             message: props => `${props.value} no es una url de imagen valida`
         }
-    },
-    categoria:{
-        type: String,
-        required:true
     },
     descripcionBreve:{
         type: String,
@@ -62,6 +58,6 @@ const productoSchema = new Schema({
 })
 
 // Generamos el modelo de producto  a partir del schema definido anteriormente 
-const Producto = mongoose.model('producto', productoSchema)
+const Receta = mongoose.model('receta', recetaSchema)
 
-export default Producto
+export default Receta
