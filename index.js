@@ -6,6 +6,7 @@ import path from "path"
 import { fileURLToPath } from "url";
 const app = express()
 import recetasRouter from "./src/routes/recetas.routes.js"
+import "./src/database/database.js"
 
 app.set("port", process.env.PORT || 4000)
 
