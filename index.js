@@ -24,7 +24,7 @@ app.use(urlencoded({extended:true}))
 const __filename = fileURLToPath(import.meta.url)
 const __dirname =  path.dirname(__filename)
 
-//Rutas
+
 app.use(express.static(path.join(__dirname,"public")))
 
 app.use('/api', recetasRouter)
